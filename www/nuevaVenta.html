@@ -1,0 +1,225 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link">
+        <i class="icon icon-back"></i>
+        <span>Atrás</span>
+      </a>
+    </div>
+    <div class="center sliding">Nueva venta</div>
+    <div class="right">
+      <a href="#" id="menuBtn" class="link icon-only open-panel"><i class="material-icons">menu_open</i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="nuevaVenta" class="page">
+    <div class="page-content close-panel">
+      <div class="content-block">
+        <form id="my-form" class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Fecha</div>
+                  <div class="item-input">
+                    <input type="date" id="Fecha_VentaID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Contacto:</div>
+                  <div class="item-input">
+                    <select id="ContactoID">
+                      <option>-- Elige --</option>
+                      <option>MercadoLibre</option>
+                      <option>Instagram</option>
+                      <option>Facebook</option>
+                      <option>Web</option>
+                      <option>e-mail</option>
+                      <option>WhatsApp</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Nombre:</div>
+                  <div class="item-input">
+                    <input type="text" name="name" placeholder="Nombre" id="NombreID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Modelo:</div>
+                  <div class="item-input">
+                    <select id="ModeloID">
+                      <option>-- Elige --</option>
+                      <option>Vintage</option>
+                      <option>Red</option>
+                      <option>Animal</option>
+                      <option>Hojas</option>
+                      <option>Palmas</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Medida:</div>
+                  <div class="item-input">
+                    <input type="text" name="name" placeholder="Ingresa la medida" id="MedidaID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="align-top">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Colores:</div>
+                  <div class="item-input">
+                    <textarea class="resizable" id="ColoresID"></textarea>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Precio ($):</div>
+                  <div class="item-input">
+                    <input type="text" name="name" placeholder="$" id="Monto_VentaID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Forma de pago:</div>
+                  <div class="item-input">
+                    <select id="Forma_pagoID">
+                      <option>-- Elige --</option>
+                      <option>Efectivo</option>
+                      <option>Transferencia</option>
+                      <option>MercadoPago</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Entrega (est.):</div>
+                  <div class="item-input">
+                    <input type="date" id="Fecha_EntregaID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Envío:</div>
+                  <div class="item-input">
+                    <label class="label-switch">
+                      <input type="checkbox" id="checkEnvio">
+                      <div class="checkbox"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div id="formEnvioId">
+                <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">Datos envío:</div>
+                        <div class="item-input">
+                          <textarea class="resizable" placeholder="Nombre y Apellido" id="NombyApeID"></textarea>
+                          <textarea class="resizable" placeholder="DNI" id="DniID"></textarea>
+                          <textarea class="resizable" placeholder="Teléfono" id="TelID"></textarea>
+                          <textarea class="resizable" placeholder="Destino" id="DestinoID"></textarea>
+                          <textarea class="resizable" placeholder="Código postal" id="CodpID"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </div>
+            <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">Colocación:</div>
+                    <div class="item-input">
+                      <label class="label-switch">
+                        <input type="checkbox" id="checkColoc">
+                        <div class="checkbox"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <div id="formColocId">
+                  <li class="align-top">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title label">Datos coloc.:</div>
+                          <div class="item-input">
+                            <textarea class="resizable" placeholder="Dirección" id="Dir_ColocID"></textarea>
+                            <input type="datetime-local" id="Fecha_ColocID"></input>
+                            <input type="text" name="name" placeholder="Costo ($)" id="Costo_ColocID">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+              </div>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Observaciones</div>
+                  <div class="item-input">
+                    <textarea class="resizable" id="Obs_VentaID"></textarea>
+                  </div>
+                </div>
+              </div>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">Estado:</div>
+                    <div class="item-input">
+                      <select id="EstadoID">
+                        <option>-- Elige --</option>
+                        <option>Pendiente</option>
+                        <option>En proceso</option>
+                        <option>Entregado</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+          
+        </form>
+        <div class="content-block theme-blue" id="btn-confirmar">
+            <a href="index.html" class="button form-to-data" id="ConfirmarVenta">Aceptar</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

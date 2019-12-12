@@ -1,0 +1,51 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="center sliding">COMPRAS</div>
+    <div class="right">
+      <!--
+          Right link contains only icon - additional "icon-only" class
+          Additional "open-panel" class tells app to open panel when we click on this link
+        -->
+      <a href="#" id="menuBtn" class="link icon-only open-panel"><i class="material-icons">menu_open</i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="compras" class="page">
+    <div class="page-content close-panel">
+      <div class="content-filtro">
+        <div class="content-filtro-txt">
+          <p>Filtrar</p>
+        </div>
+        <div class="content-meses">
+          <select name="Mes">
+            <option value="value1">Enero</option>
+            <option value="value2">Febrero</option>
+            <option value="value3">Marzo</option>
+            <option value="value3">Abril</option>
+            <option value="value3">Mayo</option>
+            <option value="value3">Junio</option>
+            <option value="value3">Julio</option>
+            <option value="value3">Agosto</option>
+            <option value="value3">Septiembre</option>
+            <option value="value3">Octubre</option>
+            <option value="value3" selected>Noviembre</option>
+            <option value="value3">Diciembre</option>
+          </select>
+        </div>
+        <div class="content-año">
+          <select name="año">
+            <option value="value1" selected>2019</option>
+            <option value="value2">2020</option>
+            <option value="value3">2021</option>
+          </select>
+        </div>
+      </div>
+      <div class="list-block" id="datosCompras">
+      </div>
+    </div>
+  </div>
+</div>
