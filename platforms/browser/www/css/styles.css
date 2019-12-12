@@ -1,0 +1,176 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+#fotoPerfil {
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#nombrePerfil {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+#cargoPerfil {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#navPerfil {
+    background-color:rgba(255, 255, 255, 0.103);
+    font-size: 1rem;
+    color: rgb(146, 146, 146);
+    padding: 7px 0 7px 5%;
+}
+
+.content-block {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px 20px 14px -20px rgba(194,194,194,1);
+    -moz-box-shadow: inset 0px 20px 14px -20px rgba(194,194,194,1);
+    box-shadow: inset 0px 20px 14px -20px rgba(194,194,194,1);
+} 
+
+.content-neto {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.content-textos {
+    padding: 0 0 0 3%;
+    margin: 0;
+    width: 73%;
+    float: left;
+    }
+    
+.content-valores {
+    padding: 0 0 0 3%;
+    margin: 0;
+    width: 21%;
+    float: left; 
+    }
+
+
+#nav-content {
+    font-size: 1rem;
+    color: rgb(117, 117, 117);
+    padding: 0 0 0 5%;
+}
+
+.content-filtro {
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+.content-filtro-txt {
+    padding: 0 0 0 3%;
+    margin: 0;
+    float: left;
+    width: 46%;
+}
+.content-meses {
+    padding: 12px 0 0 3%;
+    margin: 0;
+    float: left;
+    width: 30%;
+    align-content: center;
+}
+
+.content-año {
+    padding: 12px 0 0 0;
+    margin: 0;
+    float: left;
+    width: 15%;
+}
+
+.navbar {
+    background-color: rgb(0, 162, 255);
+    color: whitesmoke;
+}
+
+
+#formEnvioId {
+    display: none;
+}
+
+#formColocId {
+    display: none;
+}
+
+#menuBtb {
+    padding: 0;
+
+}
+
+#nodoRaiz {border-style:solid;margin: 30px; padding:25px; display:inline-block;}
+
+#btn-confirmar {
+    margin: 5% 20% 0 20%;
+}
+
+.label-switch {
+    margin: -9px 0 10px 0;
+}
+
+#comprasgraf {
+    margin: 0 0 0 5% ;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#datosOcultos {
+    display: none;
+}
+
+#datosOcultos2 {
+    display: none;
+}
+#datosOcultos3 {
+    display: none;
+}
+#datosOcultos4 {
+    display: none;
+}
+#datosOcultos5 {
+    display: none;
+}
+
+#ventasgraf {
+    margin: 0 0 0 5% ;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#trabajosdonut {
+    margin: 0 0 0 5% ;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#texto-titulo {
+    text-align: center;
+}

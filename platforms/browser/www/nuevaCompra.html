@@ -1,0 +1,64 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link">
+        <i class="icon icon-back"></i>
+        <span>Atrás</span>
+      </a>
+    </div>
+    <div class="center sliding">Nueva compra</div>
+    <div class="right">
+      <a href="#" id="menuBtn" class="link icon-only open-panel"><i class="material-icons">menu_open</i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="nuevaCompra" class="page">
+    <div class="page-content close-panel">
+      <div class="content-block">
+        <form id="my-form" class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Fecha</div>
+                  <div class="item-input">
+                    <input type="date" id="Fecha_CompraID">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Detalle:</div>
+                  <div class="item-input">
+                    <input id="Detalle_CompraID" type="text" name="name" placeholder="Descripción">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label">Monto:</div>
+                  <div class="item-input">
+                    <input type="text" name="name" placeholder="Monto ($)" id="Monto_CompraID">
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div id="btn-confirmar" class="content-block theme-blue">
+            <a href="index.html" class="button form-to-data" id="ConfirmarCompra">Aceptar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

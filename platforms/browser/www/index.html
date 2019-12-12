@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>AMÓV</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+
+    <!-- Material theme styles -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/Framework7Icons-Regular.woff2">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="theme-white" onload="IngresosNetos();"> 
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay--> 
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal close-panel">
+        <div>
+            <img src="img/perfil app.png" width="50%" height="50%" alt="" id="fotoPerfil"><br>
+            <p id="nombrePerfil">Fernando Badell</p>
+            <p id="cargoPerfil">CEO / Administrador</p>
+        </div>
+        <div class="">
+            <p id="navPerfil">MENU DE NAVEGACIÓN</p>
+            <div id="nav-content">
+                <a href="index.html" class=" close-panel" onclick="reloadindex(); IngresosNetos();">Resumen</a><br>
+                <a href="compras.html" class=" close-panel">Compras</a><br>
+                <a href="ventas.html" class=" close-panel">Ventas</a><br>
+                <a href="produccion.html" class=" close-panel">En producción</a><br>
+            </div>
+        </div>
+        <div class="">
+            <p id="navPerfil">ADMINISTRAR PERFIL</p>
+            <div id="nav-content">
+                <a href="">Modificar datos</a><br>
+                <a href="">Operadores y permisos</a><br>
+                <a href="">Cambiar PIN</a><br>
+
+            </div>
+        </div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding">RESUMEN</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <a href="#" id="menuBtn" class="link icon-only open-panel"><i
+                                class="material-icons">menu_open</i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content close-panel">
+                        <div class="content-filtro">
+                            <div class="content-filtro-txt">
+                                <p>Filtrar</p>
+                            </div>
+                            <div class="content-meses">
+                                <select name="Mes">
+                                    <option value="value1">Enero</option>
+                                    <option value="value2">Febrero</option>
+                                    <option value="value3">Marzo</option>
+                                    <option value="value3">Abril</option>
+                                    <option value="value3">Mayo</option>
+                                    <option value="value3">Junio</option>
+                                    <option value="value3">Julio</option>
+                                    <option value="value3">Agosto</option>
+                                    <option value="value3">Septiembre</option>
+                                    <option value="value3">Octubre</option>
+                                    <option value="value3" selected>Noviembre</option>
+                                    <option value="value3">Diciembre</option>
+                                </select>
+                            </div>
+                            <div class="content-año">
+                                <select name="año">
+                                    <option value="value1" selected>2019</option>
+                                    <option value="value2">2020</option>
+                                    <option value="value3">2021</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="content-textos">
+                                <p>Compras</p>
+                                <p>Ventas</p>
+                            </div>
+                            <div class="content-valores">
+                                <p id="totalCompras"></p>
+                                <p id="totalVentas"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="content-neto">
+                            <div class="content-textos">
+                                <p>Ingresos netos</p>
+                            </div>
+                            <div class="content-valores">
+                                <p id="ingresosNetos"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <p id="texto-titulo">COMPRAS MENSUALES</p><br>
+                        <div id="comprasgraf" style="height: 300px; width: 90%;"></div><br>
+                        <p id="texto-titulo">COMPRAS MENSUALES</p><br>
+                        <div id="ventasgraf" style="height: 300px; width: 90%;"></div><br>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="speed-dial">
+                <!-- FAB inside will open Speed Dial actions -->
+                <a href="#" class="floating-button">
+                    <!-- First icon is visible when Speed Dial actions are closed -->
+                    <i class="icon icon-plus"></i>
+                    <!-- Second icon is visible when Speed Dial actions are opened -->
+                    <i class="icon icon-close"></i>
+                </a>
+                <!-- Speed Dial Actions -->
+                <div class="speed-dial-buttons">
+                    <!-- First Speed Dial button -->
+                    <a href="nuevaVenta.html">
+                        <i class="material-icons">
+                            add
+                        </i>
+                    </a>
+                    <!-- Second Speed Dial  button -->
+                    <a href="nuevaCompra.html">
+                        <i class="material-icons">
+                            remove
+                        </i>
+                    </a>
+                    <!-- Third Speed Dial  button -->
+                    <a href="#">
+                        <i class="material-icons">
+                            create
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="material-icons ">
+                            double_arrow
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
